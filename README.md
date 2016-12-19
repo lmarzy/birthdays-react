@@ -1,2 +1,2 @@
 # kickstarter-react
-Kickstarter for a React site
+Kickstarter for a React app
