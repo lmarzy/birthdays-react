@@ -17,12 +17,13 @@
     "clean": "rm -rf dist",
     "stylelint": "stylelint src/**/*.scss",
     "start": "webpack-dev-server --progress --colors --inline --hot",
-    "build": "webpack --progress --colors --inline"
+    "build": "webpack --progress --colors --inline",
+    "lint": "jshint .",
+    "validate": "npm ls"
   },
   "pre-commit": [
     "clean",
-    "stylelint",
-    "jslint"
+    "stylelint"
   ],
   "babel": {
     "presets": [
