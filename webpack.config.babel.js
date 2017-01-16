@@ -6,18 +6,18 @@ import postcssPxToRem from 'postcss-pxtorem';
 
 const paths = {
   src: './src',
-  dest: 'dist'
+  dest: 'dist',
 };
-const template = `${paths.src}/index.html`
+const template = `${paths.src}/index.html`;
 const html = new HtmlWebpackPlugin({
   template,
 });
 
 export default {
-  entry: `${paths.src}/index.js`,
+  entry: `${paths.src}/index.jsx`,
   output: {
     path: paths.dest,
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   module: {
     loaders: [
@@ -29,14 +29,14 @@ export default {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loaders: ['react-hot', 'babel-loader']
+        loaders: ['babel-loader', 'eslint-loader'],
       },
       {
         test: /\.scss$/,
         exclude: /node_modules/,
-        loader: 'style-loader!css-loader!postcss-loader!sass-loader'
-      }
-    ]
+        loader: 'style-loader!css-loader!postcss-loader!sass-loader',
+      },
+    ],
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],
