@@ -23,6 +23,12 @@
     "clean",
     "stylelint"
   ],
+  "babel": {
+    "presets": [
+      "React",
+      "es2015"
+    ]
+  },
   "dependencies": {
     "react": "^15.4.1",
     "react-dom": "^15.4.1"
