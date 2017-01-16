@@ -22,7 +22,12 @@ export default {
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loaders: ['react-hot', 'babel-loader'],
+      },
+      {
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         loaders: ['react-hot', 'babel-loader']
       },
@@ -32,6 +37,12 @@ export default {
         loader: 'style-loader!css-loader!postcss-loader!sass-loader'
       }
     ]
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx'],
+  },
+  eslint: {
+    configFile: './.eslintrc',
   },
   plugins: [html],
   postcss: [
