@@ -1,18 +1,16 @@
 import React from 'react';
-import { Router, Route, browserHistory } from 'react-router';
 import { render } from 'react-dom';
+import { Router, browserHistory } from 'react-router';
+
+import routes from './routes';
+
 import './styles/global.scss';
 
-import Main from './layouts/Main';
-import Home from './containers/Home';
-import About from './containers/About';
+const router = (
+  <Router history={browserHistory} routes={routes} />
+);
 
 render(
-  <Router history={browserHistory}>
-    <Route component={Main}>
-      <Route path="/" component={Home} />
-      <Route path="/about" component={About} />
-    </Route>
-  </Router>,
+  router,
   document.getElementById('app'),
 );
