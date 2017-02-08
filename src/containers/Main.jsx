@@ -1,15 +1,15 @@
 import React, { PropTypes } from 'react';
+import { Header, Footer } from '../components';
 
-const Main = (props) => {
-  const Props = props;
-  console.log(Props);
-  return (
-    <div>
-      <h1>Main</h1>
+const Main = props => (
+  <div>
+    <Header />
+    <main>
       {props.children}
-    </div>
-  );
-};
+    </main>
+    <Footer />
+  </div>
+);
 
 Main.propTypes = {
   children: PropTypes.element.isRequired,

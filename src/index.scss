@@ -2,17 +2,17 @@
 // MAIN - IMPORTS
 // -------------------------------------------------- */
 
-@import "01-settings/_imports";
+@import "styles/01-settings/_imports";
 
 @if variable-exists(font-url) {
   @import url($font-url);
 }
 
-@import "02-tools/_imports";
-@import "03-base/_imports";
-@import "04-elements/_imports";
-@import "05-objects/_imports";
-@import "06-utilities/_imports";
+@import "styles/02-tools/_imports";
+@import "styles/03-base/_imports";
+@import "styles/04-elements/_imports";
+@import "styles/05-objects/_imports";
+@import "styles/06-utilities/_imports";
 
 // CSS Organisation
 

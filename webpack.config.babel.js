@@ -1,54 +1,52 @@
+import webpack from 'webpack';
+import { resolve } from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import autoprefixer from 'autoprefixer';
-import postcssVr from 'postcss-vr';
-import postcssFocus from 'postcss-focus';
-import postcssPxToRem from 'postcss-pxtorem';
+import StyleLintPlugin from 'stylelint-webpack-plugin';
 
 const paths = {
   src: './src',
   dest: 'dist',
 };
 const template = `${paths.src}/index.html`;
-const html = new HtmlWebpackPlugin({
-  template,
-});
+const loaderOptions = { eslint: { configFile: './.eslintrc' } };
 
-export default {
+export default () => ({
   entry: `${paths.src}/index.jsx`,
   output: {
-    path: paths.dest,
+    path: resolve(__dirname, paths.dest),
     filename: 'bundle.js',
   },
+  devServer: {
+    port: 8080,
+    publicPath: '/',
+    historyApiFallback: true,
+  },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.jsx$/,
         exclude: /node_modules/,
-        loaders: ['react-hot', 'babel-loader'],
+        enforce: 'pre',
+        use: ['babel-loader', 'eslint-loader'],
       },
       {
-        test: /\.jsx?$/,
+        test: /\.jsx$/,
         exclude: /node_modules/,
-        loaders: ['babel-loader', 'eslint-loader'],
+        use: ['react-hot-loader', 'babel-loader'],
       },
       {
         test: /\.scss$/,
         exclude: /node_modules/,
-        loader: 'style-loader!css-loader!postcss-loader!sass-loader',
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
       },
     ],
   },
   resolve: {
-    extensions: ['', '.js', '.jsx'],
+    extensions: ['.js', '.jsx'],
   },
-  eslint: {
-    configFile: './.eslintrc',
-  },
-  plugins: [html],
-  postcss: [
-    autoprefixer,
-    postcssVr,
-    postcssFocus,
-    postcssPxToRem,
+  plugins: [
+    new HtmlWebpackPlugin({ template }),
+    new webpack.LoaderOptionsPlugin({ options: loaderOptions }),
+    new StyleLintPlugin(),
   ],
-};
+});
