@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { Header, Footer } from '../components';
+import { Header, Footer } from 'components';
 
 const Main = props => (
   <div>

@@ -43,6 +43,10 @@ export default () => ({
   },
   resolve: {
     extensions: ['.js', '.jsx'],
+    alias: {
+      containers: resolve(__dirname, 'src/containers'),
+      components: resolve(__dirname, 'src/components'),
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({ template }),
