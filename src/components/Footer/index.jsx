@@ -1,9 +1,10 @@
 import React from 'react';
+import './index.scss';
 
 const Footer = () => (
-  <header>
-    <h1>&copy; React Kickstarter</h1>
-  </header>
+  <footer role="contentinfo" className="siteFooter">
+    <p><small>&copy; React Kickstarter</small></p>
+  </footer>
 );
 
 export default Footer;

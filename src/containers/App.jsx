@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { Header, Footer } from 'components';
 
-const Main = props => (
+const App = props => (
   <div>
     <Header />
     <main>
@@ -11,8 +11,8 @@ const Main = props => (
   </div>
 );
 
-Main.propTypes = {
+App.propTypes = {
   children: PropTypes.element.isRequired,
 };
 
-export default Main;
+export default App;
