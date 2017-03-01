@@ -1,7 +1,7 @@
 import React from 'react';
 import { IndexRoute } from 'react-router';
-import { Main } from 'components';
+import { Home } from 'containers';
 
 export default (
-  <IndexRoute component={Main} />
+  <IndexRoute component={Home} />
 );
