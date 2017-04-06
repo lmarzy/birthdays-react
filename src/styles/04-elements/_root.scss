@@ -7,9 +7,3 @@ html {
   color: $text;
   background-color: $bg;
 }
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
