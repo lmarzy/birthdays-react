@@ -1,0 +1,32 @@
+// 08/UTILITIES - BP-VISIBILITY
+
+.hide#{$at}default,
+.hide#{$at}default-up {
+  display: none;
+}
+
+$mapKeys: join("default", map-keys($breakpoints));
+$i: 1;
+
+@each $bp, $query in $breakpoints {
+  @include bp($bp) {
+    @if (nth($mapKeys,$i) == "default") {
+      .hide#{$at}#{nth($mapKeys,$i)} {
+        display: inherit !important;
+      }
+    }
+
+    @else {
+      .hide#{$at}bp#{nth($mapKeys,$i)} {
+        display: inherit !important;
+      }
+    }
+
+    .hide-bp#{$bp},
+    .hide-bp#{$bp}-up {
+      display: none !important;
+    }
+  }
+
+  $i: $i + 1;
+}// END @each

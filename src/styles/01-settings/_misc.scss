@@ -1,9 +1,8 @@
-/* --------------------------------------------------
-// 01/SETTINGS - MISC
-// -------------------------------------------------- */
+// 01-SETTINGS/MISC
 
-// MISC
 $transition-duration   : 250ms;
 $border-radius         : 6px;
 $max-width             : 1224px;
 $img-path              : 'assets/img';
+
+$at                    : \@; // used in the varialble name so this needs to be created as a variable first

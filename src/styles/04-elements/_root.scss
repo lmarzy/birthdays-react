@@ -1,6 +1,4 @@
-/* --------------------------------------------------
 // 04/ELEMENTS - HTML
-// -------------------------------------------------- */
 
 html {
   font-size: $font-size;
@@ -8,4 +6,10 @@ html {
   line-height: $line-height;
   color: $text;
   background-color: $bg;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }

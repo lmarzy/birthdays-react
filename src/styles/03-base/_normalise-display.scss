@@ -1,8 +1,17 @@
-/* --------------------------------------------------
 // 03/BASE - NORMALISE DISPLAY
-// -------------------------------------------------- */
 
 template,
 [hidden] {
   display: none;
+}
+
+figcaption,
+figure,
+main,
+menu {
+  display: block;
+}
+
+summary {
+  display: list-item;
 }
