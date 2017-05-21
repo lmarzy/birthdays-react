@@ -1,6 +1,10 @@
 # kickstarter-react
 Kickstarter for a React app
 
+## Running the site
+yarn start - builds the site and starts a local web server
+yarn run build - builds a production version of the site to a 'dist' directory
+
 ## scripts
 "clean": "rm -rf dist",
 "stylelint": "stylelint src/**/*.scss",

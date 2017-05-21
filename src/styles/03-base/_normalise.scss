@@ -39,8 +39,11 @@ fieldset {
   border: none;
 }
 
-button {
+button,
+input,
+select {
   font: inherit;
+  cursor: pointer;
 }
 
 strong {

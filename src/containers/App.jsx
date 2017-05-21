@@ -1,18 +1,19 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+import { Home, About } from 'containers';
 import { Header, Footer } from 'components';
 
-const App = props => (
-  <div>
-    <Header />
-    <main>
-      {props.children}
-    </main>
-    <Footer />
-  </div>
+const App = () => (
+  <BrowserRouter>
+    <div>
+      <Header />
+      <main>
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+      </main>
+      <Footer />
+    </div>
+  </BrowserRouter>
 );
-
-App.propTypes = {
-  children: PropTypes.element.isRequired,
-};
 
 export default App;

@@ -1,9 +1,0 @@
-// 08/UTILITIES - WIDTHS
-
-@include widths();
-
-@each $bp, $query in $breakpoints {
-  @include bp($bp) {
-    @include widths($at + "bp" + $bp);
-  }
-}

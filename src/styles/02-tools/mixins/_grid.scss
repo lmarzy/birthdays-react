@@ -1,23 +1,22 @@
 // 02/TOOLS/MIXINS - GRID
 
 // Usage
-// @include layout
-// @include layout(48px)
+// @include grid
 
-@mixin grid($marginLeft: $gutter) {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -$marginLeft;
+@mixin grid() {
+  display: grid;
+  grid-template-columns: repeat($grid-columns, 1fr);
+  grid-gap: $gutter;
+}
 
-  &_item {
-    padding-left: $marginLeft;
+// This will loop through each breakpoint and generate a new class to be added to the markup to show how much that elements spans at what breakpoint
+// Usage
+// @include grid-widths($at + "bp" + $bp)
+
+@mixin grid-widths($namespace: "") {
+  @for $i from 1 through $grid-columns {
+    .l-grid_span#{$i}#{$namespace} {
+      grid-column: span $i;
+    }
   }
-}
-
-@mixin grid-width($x, $y: 1) {
-  flex-basis: (100% / $x) * $y;
-}
-
-@mixin push($x, $y: 1) {
-  margin-left: (100% / $x) * $y;
 }

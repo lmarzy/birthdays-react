@@ -1,5 +1,13 @@
-// 05/OBJECTS - GRIDS
+// 05/LAYOUT - GRIDS
 
 .l-grid {
   @include grid;
+}
+
+@include grid-widths;
+
+@each $bp, $query in $breakpoints {
+  @include bp($bp) {
+    @include grid-widths($at + "bp" + $bp);
+  }
 }
