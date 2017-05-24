@@ -1,6 +1,7 @@
 import webpack from 'webpack';
 import { resolve } from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import StyleLintPlugin from 'stylelint-webpack-plugin';
 
 const paths = {
@@ -37,7 +38,12 @@ export default () => ({
       {
         test: /\.scss$/,
         exclude: /node_modules/,
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+        use: ExtractTextPlugin.extract({
+          fallback: [{
+            loader: 'style-loader',
+          }],
+          use: ['css-loader?modules', 'postcss-loader', 'sass-loader'],
+        }),
       },
     ],
   },
@@ -51,6 +57,7 @@ export default () => ({
   },
   plugins: [
     new HtmlWebpackPlugin({ template }),
+    new ExtractTextPlugin('main.css'),
     new webpack.LoaderOptionsPlugin({ options: loaderOptions }),
     new StyleLintPlugin(),
   ],
