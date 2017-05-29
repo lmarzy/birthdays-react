@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './index.scss';
+import styles from './index.scss';
 
 const Input = props => (
-  <input type={props.type} className="input" />
+  <input type={props.type} className={styles.input} />
 );
 
 Input.propTypes = {

@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './index.scss';
+import styles from './index.scss';
 
 const Button = props => (
-  <button type={props.type} className="btn">{props.text}</button>
+  <button type={props.type} className={styles.btn}>{props.text}</button>
 );
 
 Button.propTypes = {

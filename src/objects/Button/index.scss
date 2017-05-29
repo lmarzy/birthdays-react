@@ -9,13 +9,13 @@
   text-align: center;
   cursor: pointer;
   transition: all 300ms ease-in-out;
+}
 
-  &-a {
-    background: $brand-a;
-    color: white;
+.primary {
+  background: $brand-a;
+  color: white;
 
-    &:hover {
-      background: darken($brand-a, 10);
-    }
+  &:hover {
+    background: darken($brand-a, 10);
   }
 }

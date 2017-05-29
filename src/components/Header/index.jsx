@@ -4,7 +4,7 @@ import { Navigation } from 'components';
 import './index.scss';
 
 const Header = () => (
-  <header role="banner" className="c-siteHeader">
+  <header role="banner" className="siteHeader">
     <h1>React Kickstarter</h1>
     <Navigation />
     <Input type="text" />

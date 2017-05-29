@@ -1,14 +1,6 @@
 @import '../../styles/01-settings/__imports.scss';
 @import '../../styles/02-tools/__imports.scss';
 
-.siteNav {
-  background: lightblue;
-}
-
-.items {
-  list-style: none;
-}
-
-.link {
-  display: block;
+.container {
+  @include container;
 }

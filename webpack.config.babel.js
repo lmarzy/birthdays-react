@@ -42,7 +42,7 @@ export default () => ({
           fallback: [{
             loader: 'style-loader',
           }],
-          use: ['css-loader', 'postcss-loader', 'sass-loader'],
+          use: ['css-loader?modules', 'postcss-loader', 'sass-loader'],
         }),
       },
     ],

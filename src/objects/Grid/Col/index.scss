@@ -1,8 +1,5 @@
-// 05/LAYOUT - GRIDS
-
-.l-grid {
-  @include grid;
-}
+@import '../../../styles/01-settings/__imports.scss';
+@import '../../../styles/02-tools/__imports.scss';
 
 @include grid-widths;
 

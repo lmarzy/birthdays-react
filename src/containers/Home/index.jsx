@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { GridRow, GridCol, Button } from 'objects';
 
 export default class Home extends Component {
   constructor() {
@@ -11,7 +12,14 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div>Home</div>
+      <GridRow>
+        <GridCol span={['12', '6@bp10']}>
+          <Button type="button" text="button" />
+        </GridCol>
+        <GridCol span={['12', '6@bp10']}>
+          <Button type="button" text="button" />
+        </GridCol>
+      </GridRow>
     );
   }
 }
