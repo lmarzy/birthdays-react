@@ -4,11 +4,7 @@ import PropTypes from 'prop-types';
 import styles from './index.scss';
 
 const GridCol = (props) => {
-  const classArray = [];
-
-  props.span.forEach((span) => {
-    classArray.push(styles[`span${span}`]);
-  });
+  const classArray = props.span.map(value => styles[`span${value}`]);
 
   const classNames = classnames(classArray);
 
