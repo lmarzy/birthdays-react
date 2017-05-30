@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './index.scss';
 
-const Navigation = () => (
+const Nav = () => (
   <nav className={styles.siteNav}>
     <ul className={styles.items}>
       <li className={styles.items}>
@@ -15,4 +15,4 @@ const Navigation = () => (
   </nav>
 );
 
-export default Navigation;
+export default Nav;

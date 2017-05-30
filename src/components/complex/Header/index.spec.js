@@ -4,9 +4,14 @@ import { expect } from 'chai';
 
 import Header from './index';
 
+const wrapper = shallow(<Header />);
+
 describe('<Header />', () => {
+  it('should be of type "header"', () => {
+    expect(wrapper.type()).to.equal('header');
+  });
+
   it('should have a h1 element', () => {
-    const wrapper = shallow(<Header />);
     expect(wrapper.find('h1')).to.have.length(1);
   });
 });

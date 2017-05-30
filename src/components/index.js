@@ -1,6 +1,6 @@
 export { default as Header } from './complex/Header';
 export { default as Footer } from './complex/Footer';
-export { default as Navigation } from './complex/Navigation';
+export { default as Nav } from './complex/Nav';
 
 export { default as Button } from './simple/Button';
 export { default as Input } from './simple/Input';

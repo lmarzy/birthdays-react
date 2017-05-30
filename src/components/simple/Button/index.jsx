@@ -3,12 +3,14 @@ import PropTypes from 'prop-types';
 import styles from './index.scss';
 
 const Button = props => (
-  <button type={props.type} className={styles.btn}>{props.text}</button>
+  <button type={props.type} className={styles.btn}>
+    {props.children}
+  </button>
 );
 
 Button.propTypes = {
   type: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
 };
 
 export default Button;
