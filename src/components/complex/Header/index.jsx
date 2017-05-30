@@ -1,6 +1,5 @@
 import React from 'react';
-import { Button, Input } from 'objects';
-import { Navigation } from 'components';
+import { Navigation, Button, Input } from 'components';
 import './index.scss';
 
 const Header = () => (

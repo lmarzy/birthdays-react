@@ -52,7 +52,6 @@ export default () => ({
     alias: {
       containers: resolve(__dirname, 'src/containers'),
       components: resolve(__dirname, 'src/components'),
-      objects: resolve(__dirname, 'src/objects'),
     },
   },
   plugins: [
