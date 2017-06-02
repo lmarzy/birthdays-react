@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.scss';
+import './footer.scss';
 
 const Footer = () => (
   <footer role="contentinfo" className="siteFooter">

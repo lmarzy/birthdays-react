@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './index.scss';
+import styles from './nav.scss';
 
 const Nav = () => (
   <nav className={styles.siteNav}>
