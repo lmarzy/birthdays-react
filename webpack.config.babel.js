@@ -52,6 +52,7 @@ export default () => ({
     alias: {
       containers: resolve(__dirname, 'src/containers'),
       components: resolve(__dirname, 'src/components'),
+      sassVars: resolve(__dirname, 'src/assets/css/01-settings/'),
     },
   },
   plugins: [

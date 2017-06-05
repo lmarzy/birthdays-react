@@ -1,8 +1,8 @@
 import React from 'react';
-import './header.scss';
+import styles from './header.scss';
 
 const Header = () => (
-  <header role="banner" className="siteHeader">
+  <header role="banner" className={styles.siteHeader}>
     <h1>React Kickstarter</h1>
   </header>
 );

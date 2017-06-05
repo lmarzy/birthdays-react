@@ -1,4 +1,6 @@
-@import '../../../assets/css/01-settings/__imports.scss';
+@import '~sassVars/colours';
 @import '../../../assets/css/02-tools/__imports.scss';
 
-//.c-siteHeader {}
+.siteHeader {
+  background: $brand-a;
+}
