@@ -1,0 +1,29 @@
+@import '~sassTools/functions/px-to-rem';
+@import '~sassVars/colours';
+
+.input {
+  display: inline-block;
+  height: rem(48px);
+  padding: rem(10px);
+  background: white;
+  border: 1px solid $borders;
+  vertical-align: middle;
+  line-height: 1.5;
+  color: $text;
+  font-weight: 300;
+
+  &::-webkit-input-placeholder {
+    font-weight: 300;
+    color: lighten($text, 10);
+  }
+
+  &::-moz-placeholder {
+    font-weight: 300;
+    color: lighten($text, 10);
+  }
+
+  &:-ms-input-placeholder {
+    font-weight: 300;
+    color: lighten($text, 10);
+  }
+}

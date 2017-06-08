@@ -1,0 +1,5 @@
+@import '~sassTools/mixins/grid';
+
+.grid {
+  @include grid;
+}

@@ -42,7 +42,7 @@ export default () => ({
           fallback: [{
             loader: 'style-loader',
           }],
-          use: ['css-loader?modules', 'postcss-loader', 'sass-loader'],
+          use: ['css-loader?modules&importLoaders=1&localIndentName=[name]_local_[hash:base64:5]', 'postcss-loader', 'sass-loader'],
         }),
       },
     ],
@@ -52,7 +52,11 @@ export default () => ({
     alias: {
       containers: resolve(__dirname, 'src/containers'),
       components: resolve(__dirname, 'src/components'),
-      sassVars: resolve(__dirname, 'src/assets/css/01-settings/'),
+      layout: resolve(__dirname, 'src/layout'),
+      objects: resolve(__dirname, 'src/objects'),
+      styles: resolve(__dirname, 'src/styles/'),
+      sassVars: resolve(__dirname, 'src/styles/settings/'),
+      sassTools: resolve(__dirname, 'src/styles/tools/'),
     },
   },
   plugins: [

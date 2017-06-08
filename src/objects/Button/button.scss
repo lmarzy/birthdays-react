@@ -1,0 +1,21 @@
+@import '~sassVars/colours';
+@import '~sassVars/spacings';
+
+.btn {
+  display: inline-block;
+  padding: $rhythm / 2 $gutter * 2;
+  vertical-align: middle;
+  font: inherit;
+  text-align: center;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.primary {
+  background: $brand-a;
+  color: white;
+
+  &:hover {
+    background: darken($brand-a, 10);
+  }
+}
