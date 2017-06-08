@@ -14,7 +14,7 @@
     "collectCoverage": true
   },
   "scripts": {
-    "clean": "rm -rf dist",
+    "clean": "rm -rf dist coverage",
     "stylelint": "stylelint src/**/*.scss",
     "test": "jest",
     "start": "webpack-dev-server",
