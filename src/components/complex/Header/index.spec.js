@@ -1,17 +1,20 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { expect } from 'chai';
 
 import Header from './index';
 
-const wrapper = shallow(<Header />);
+const component = shallow(<Header />);
 
 describe('<Header />', () => {
-  it('should be of type "header"', () => {
-    expect(wrapper.type()).to.equal('header');
+  it('Should render a "<Header />" component', () => {
+    expect(component).toHaveLength(1);
   });
 
-  it('should have a h1 element', () => {
-    expect(wrapper.find('h1')).to.have.length(1);
+  it('Should be of type "header"', () => {
+    expect(component.type()).toEqual('header');
+  });
+
+  it('Should contain a h1 element', () => {
+    expect(component.find('h1')).toHaveLength(1);
   });
 });

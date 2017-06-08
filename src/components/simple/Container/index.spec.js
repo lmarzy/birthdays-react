@@ -1,13 +1,16 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { expect } from 'chai';
 
 import Container from './index';
 
-const wrapper = shallow(<Container>test</Container>);
+const component = shallow(<Container><div></div><div></div></Container>);
 
 describe('<Container />', () => {
-  it('should be of type "div"', () => {
-    expect(wrapper.type()).to.equal('div');
+  it('Should render a "<Container />" component', () => {
+    expect(component).toHaveLength(1);
+  });
+
+  it('Should be of type "div"', () => {
+    expect(component.type()).toEqual('div');
   });
 });
