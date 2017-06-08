@@ -1,8 +1,8 @@
 // 02/TOOLS/MIXINS - BREAKPOINTS
 
 // Usage
-// @include bp(10) {}
-// @include bp(10, max) {}
+// @include bp(10) {} - MIN BREAKPOINT
+// @include bp(10, max) {} - MAX BREAKPOINT
 
 @mixin bp($breakpoint, $type: min) {
   @if not map-has-key($breakpoints, $breakpoint) {

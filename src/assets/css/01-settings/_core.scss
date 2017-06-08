@@ -1,4 +1,16 @@
 // 01-SETTINGS/CORE
 
-$font-size-px           : 16px;
-$line-height-px         : $font-size-px * 1.5;
+// CORE FONT-SIZE/LINE-HEIGHT IN PX'S
+$font-size-px     : 16px;
+$line-height-px   : $font-size-px * 1.5;
+
+// LAYOUT
+$max-width        : 1224px;
+$grid-columns     : 12;
+
+// SPACINGS
+$rhythm : $line-height-px / $font-size-px * 1rem;
+$gutter : 20px / $font-size-px * 1rem;
+
+// PATHS
+$img-path         : 'assets/img';

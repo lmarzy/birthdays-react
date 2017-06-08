@@ -2,5 +2,9 @@
 @import '../../../assets/css/02-tools/__imports.scss';
 
 .container {
-  @include container;
+  padding-left: $rhythm / 2;
+  padding-right: $rhythm / 2;
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
 }
