@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { GridRow, GridCol } from 'layout';
 
 export default class Home extends Component {
   constructor() {
@@ -12,14 +11,7 @@ export default class Home extends Component {
 
   render() {
     return (
-      <GridRow>
-        <GridCol span={['12', '6@bp10']}>
-          <div>left</div>
-        </GridCol>
-        <GridCol span={['12', '6@bp10']}>
-          <div>right</div>
-        </GridCol>
-      </GridRow>
+      <div>home</div>
     );
   }
 }

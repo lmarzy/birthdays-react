@@ -42,7 +42,16 @@ export default () => ({
           fallback: [{
             loader: 'style-loader',
           }],
-          use: ['css-loader?modules&importLoaders=1&localIndentName=[name]_local_[hash:base64:5]', 'postcss-loader', 'sass-loader'],
+          use: [
+            'css-loader?modules&importLoaders=1&localIndentName=[name]_local_[hash:base64:5]',
+            'postcss-loader',
+            'sass-loader', {
+              loader: 'sass-resources-loader',
+              options: {
+                resources: [resolve(__dirname, 'src/styles/settings/*.scss'), resolve(__dirname, 'src/styles/functions/*.scss'), resolve(__dirname, 'src/styles/mixins/*.scss')],
+              },
+            },
+          ],
         }),
       },
     ],
@@ -52,11 +61,6 @@ export default () => ({
     alias: {
       containers: resolve(__dirname, 'src/containers'),
       components: resolve(__dirname, 'src/components'),
-      layout: resolve(__dirname, 'src/layout'),
-      objects: resolve(__dirname, 'src/objects'),
-      styles: resolve(__dirname, 'src/styles/'),
-      sassVars: resolve(__dirname, 'src/styles/settings/'),
-      sassTools: resolve(__dirname, 'src/styles/tools/'),
     },
   },
   plugins: [

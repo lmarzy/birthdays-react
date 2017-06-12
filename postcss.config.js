@@ -4,5 +4,5 @@ const PostCssFocus = require('postcss-focus');
 const PostCssPxToRem = require('postcss-pxtorem');
 
 module.exports = {
-  plugins: [Autoprefixer, PostCssVr, PostCssFocus, PostCssPxToRem],
+  plugins: [Autoprefixer, PostCssVr, PostCssFocus, PostCssPxToRem({ propList: ['*'] })],
 };

@@ -1,0 +1,18 @@
+// ========================================================================
+// BASE/LISTS
+// ========================================================================
+
+// Remove default margin top and bottom
+
+dl,
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+// Remove default margin left
+
+dd {
+  margin-left: 0;
+}
