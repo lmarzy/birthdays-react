@@ -1,8 +1,9 @@
 import React from 'react';
-import './footer.scss';
+
+import styles from './styles.scss';
 
 const Footer = () => (
-  <footer role="contentinfo" className="siteFooter">
+  <footer role="contentinfo" className={styles.footer}>
     <p><small>&copy; React Kickstarter</small></p>
   </footer>
 );

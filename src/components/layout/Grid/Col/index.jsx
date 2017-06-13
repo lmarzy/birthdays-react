@@ -1,7 +1,8 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import styles from './grid-col.scss';
+
+import styles from './styles.scss';
 
 const GridCol = (props) => {
   const classArray = props.span.map(value => styles[`span${value}`]);

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './grid-row.scss';
+
+import styles from './styles.scss';
 
 const GridRow = props => (
   <div className={styles.grid}>

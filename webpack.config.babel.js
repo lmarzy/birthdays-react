@@ -48,7 +48,7 @@ export default () => ({
             'sass-loader', {
               loader: 'sass-resources-loader',
               options: {
-                resources: [resolve(__dirname, 'src/styles/settings/*.scss'), resolve(__dirname, 'src/styles/functions/*.scss'), resolve(__dirname, 'src/styles/mixins/*.scss')],
+                resources: ['./src/styles/settings/*.scss', './src/styles/functions/*.scss', './src/styles/mixins/*.scss'],
               },
             },
           ],
