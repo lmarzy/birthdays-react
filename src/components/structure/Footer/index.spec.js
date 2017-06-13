@@ -14,10 +14,6 @@ describe('<Footer />', () => {
     expect(component.type()).toEqual('footer');
   });
 
-  it('Should contain a p element', () => {
-    expect(component.find('p')).toHaveLength(1);
-  });
-
   it('Should contain a small element', () => {
     expect(component.find('small')).toHaveLength(1);
   });

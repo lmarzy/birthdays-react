@@ -4,7 +4,7 @@ import styles from './styles.scss';
 
 const Footer = () => (
   <footer role="contentinfo" className={styles.footer}>
-    <p><small>&copy; React Kickstarter</small></p>
+    <small className={styles.copyright}>&copy; React Kickstarter</small>
   </footer>
 );
 

@@ -1,6 +1,9 @@
 .header {
-  width: 400px;
-  background: $brand-a;
-  color: white;
-  font-size: 20px;
+  padding-left: $gutter;
+  padding-right: $gutter;
+  border-bottom: 1px solid $borders;
+}
+
+.heading {
+  @include vr(20px, 2, 0);
 }
