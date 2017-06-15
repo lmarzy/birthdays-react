@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> renders a snapshot 1`] = `
+<div>
+  <header
+    className="header"
+    role="banner"
+  >
+    <h1
+      className="heading"
+    >
+      React Kickstarter
+    </h1>
+  </header>
+  <main>
+    <div
+      className="container"
+    />
+  </main>
+  <footer
+    className="footer"
+    role="contentinfo"
+  >
+    <small
+      className="copyright"
+    >
+      © React Kickstarter
+    </small>
+  </footer>
+</div>
+`;

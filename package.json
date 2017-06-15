@@ -7,6 +7,9 @@
   "author": "Lee Marsden",
   "license": "MIT",
   "jest": {
+    "modulePaths": [
+      "src"
+    ],
     "moduleNameMapper": {
       "\\.(css|scss)$": "identity-obj-proxy"
     },
@@ -27,7 +30,7 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.1.1",
-    "react-test-renderer": "^15.5.4"
+    "react-test-renderer": "^15.6.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.1",

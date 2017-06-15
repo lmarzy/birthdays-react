@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer';
 
 import Button from './index';
 
@@ -12,5 +13,10 @@ describe('<Button />', () => {
 
   it('Should be of type "button"', () => {
     expect(component.type()).toEqual('button');
+  });
+
+  it('renders a snapshot', () => {
+    const tree = renderer.create(<Button type="button">Testing</Button>).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

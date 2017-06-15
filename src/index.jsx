@@ -1,5 +1,5 @@
 /*eslint-disable */
-import './styles/base.scss';
+import './index.scss';
 
 import React from 'react';
 import { render } from 'react-dom';
