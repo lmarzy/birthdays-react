@@ -1,3 +1,6 @@
+@import '~sassSettings';
+@import '~sassTools';
+
 .btn {
   display: inline-block;
   padding: $rhythm / 2 $gutter * 2;

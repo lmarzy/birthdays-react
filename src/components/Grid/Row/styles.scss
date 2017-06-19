@@ -1,3 +1,6 @@
+@import '~sassSettings';
+@import '~sassTools';
+
 .grid {
   display: grid;
   grid-template-columns: repeat($grid-columns, 1fr);

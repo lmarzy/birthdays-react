@@ -45,12 +45,7 @@ export default () => ({
           use: [
             'css-loader?modules&importLoaders=1&localIndentName=[name]_local_[hash:base64:5]',
             'postcss-loader',
-            'sass-loader', {
-              loader: 'sass-resources-loader',
-              options: {
-                resources: ['./src/styles/settings/*.scss', './src/styles/functions/*.scss', './src/styles/mixins/*.scss'],
-              },
-            },
+            'sass-loader',
           ],
         }),
       },
@@ -60,7 +55,10 @@ export default () => ({
     extensions: ['.js', '.jsx'],
     alias: {
       containers: resolve(__dirname, 'src/containers'),
+      elements: resolve(__dirname, 'src/elements'),
       components: resolve(__dirname, 'src/components'),
+      sassSettings: resolve(__dirname, 'src/styles/settings/_imports.scss'),
+      sassTools: resolve(__dirname, 'src/styles/tools/_imports.scss'),
     },
   },
   plugins: [

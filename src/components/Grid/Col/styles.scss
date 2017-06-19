@@ -1,3 +1,6 @@
+@import '~sassSettings';
+@import '~sassTools';
+
 @include grid-widths;
 
 @each $bp, $query in $breakpoints {

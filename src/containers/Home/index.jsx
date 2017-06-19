@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Icon } from 'components';
+import { Icon } from 'elements';
 
 export default class Home extends Component {
   constructor() {
