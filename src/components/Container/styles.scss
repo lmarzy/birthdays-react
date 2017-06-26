@@ -1,9 +1,23 @@
 @import '~sassSettings';
+@import '~sassTools';
 
 .container {
-  padding-left: $rhythm / 2;
-  padding-right: $rhythm / 2;
-  max-width: $max-width;
-  margin-left: auto;
-  margin-right: auto;
+  min-height: 50vh;
+  padding: $gutter $rhythm;
+
+  @include bp(10) {
+    height: 100vh;
+    padding-top: $rhythm * 2;
+  }
 }
+
+.search {
+  color: #cbcfd4;
+  background: $brand-a;
+}
+
+.result {
+  color: white;
+  background: $brand-b;
+}
+

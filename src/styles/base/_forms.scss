@@ -2,17 +2,9 @@
 // BASE/FORMS
 // ========================================================================
 
-// Remove default margin and border
-
-fieldset {
-  margin: 0;
-  border: none;
-}
-
 // Inherit site font and set cursor to pointer
 
 button,
-input,
 select {
   font: inherit;
   cursor: pointer;

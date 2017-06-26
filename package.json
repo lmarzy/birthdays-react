@@ -1,9 +1,9 @@
 {
-  "name": "kickstarter-react",
+  "name": "Birthdays-React",
   "version": "1.0.0",
-  "description": "Kickstarter for a React App",
+  "description": "React app to find a family members birthday",
   "main": "index.js",
-  "repository": "https://github.com/lmarzy/kickstarter-react.git",
+  "repository": "https://github.com/lmarzy/birthdays-react.git",
   "author": "Lee Marsden",
   "license": "MIT",
   "jest": {

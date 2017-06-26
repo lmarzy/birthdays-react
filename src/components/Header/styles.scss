@@ -1,12 +1,11 @@
-@import '~sassSettings';
 @import '~sassTools';
 
 .header {
-  padding-left: $gutter;
-  padding-right: $gutter;
-  border-bottom: 1px solid $borders;
+  padding: 6px;
+  text-align: center;
 }
 
-.heading {
-  @include vr(20px, 2, 0);
+.iconWrap {
+  margin-bottom: 6px;
+  font-size: 28px;
 }

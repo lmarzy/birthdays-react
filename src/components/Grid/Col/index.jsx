@@ -18,7 +18,7 @@ const GridCol = (props) => {
 
 GridCol.propTypes = {
   span: PropTypes.arrayOf(PropTypes.string).isRequired,
-  children: PropTypes.element.isRequired,
+  children: PropTypes.arrayOf(PropTypes.element).isRequired,
 };
 
 export default GridCol;
